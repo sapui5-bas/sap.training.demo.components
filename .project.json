@@ -18,6 +18,11 @@
       "templateId": "servicecatalog.connectivityComponent",
       "templateVersion": "0.0.0",
       "dateTimeStamp": "Tue, 29 Nov 2016 08:41:49 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationComponent",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Wed, 30 Nov 2016 15:45:46 GMT"
     }
   ],
   "translation": {
@@ -40,7 +45,7 @@
     "blockPushLevel": "Error"
   },
   "mockpreview": {
-    "mockUri": "/ODATA_ORG/V2/(S(ngqyqb2uvlotosqhtlif4jen))/OData/OData.svc",
+    "mockUri": "/ODATA_ORG/TripPinRESTierService/(S(44nbzk0kapmsdmankuj0auq0))/",
     "metadataFilePath": "",
     "loadJSONFiles": false,
     "loadCustomRequests": false,

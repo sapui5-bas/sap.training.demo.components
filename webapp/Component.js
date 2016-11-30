@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"sap/training/model/models"
-], function(UIComponent, Device, models) {
+	"sap/training/model/models",
+	"sap/ui/model/odata/v4/ODataModel"
+], function(UIComponent, Device, models, ODataModel) {
 	"use strict";
 
 	return UIComponent.extend("sap.training.Component", {
@@ -19,6 +20,15 @@ sap.ui.define([
 		init: function() {
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
+
+			// var oModel = new ODataModel({
+			// 	serviceUrl: "/ODATA_ORG/TripPinRESTierService/(S(44nbzk0kapmsdmankuj0auq0))/",
+			// 	synchronizationMode: 'None'
+			// });
+			// oModel.setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
+			// this.setModel(oModel);
+			
+			// this.getModel().setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");

@@ -4,6 +4,7 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("sap.training.controller.Main", {
-
+		
+	
 	});
 });

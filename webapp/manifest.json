@@ -15,11 +15,11 @@
 			"version": "0.0.0"
 		},
 		"dataSources": {
-			"OData.svc": {
-				"uri": "/ODATA_ORG/V2/(S(ngqyqb2uvlotosqhtlif4jen))/OData/OData.svc/",
+			"TripPin": {
+				"uri": "/ODATA_ORG/TripPinRESTierService/(S(44nbzk0kapmsdmankuj0auq0))/",
 				"type": "OData",
 				"settings": {
-					"odataVersion": "2.0",
+					"odataVersion": "4.0",
 					"localUri": "localService/metadata.xml"
 				}
 			}
@@ -49,7 +49,7 @@
 	"sap.ui5": {
 		"_version": "1.1.0",
 		"rootView": {
-			"viewName": "sap.training.view.Main",
+			"viewName": "sap.training.view.Operations",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -70,14 +70,18 @@
 				"settings": {
 					"bundleName": "sap.training.i18n.i18n"
 				}
+			},
+			"": {
+				"dataSource": "TripPin",
+				"settings": {
+					"synchronizationMode": "None"
+				}
 			}
 		},
 		"resources": {
-			"css": [
-				{
-					"uri": "css/style.css"
-				}
-			]
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		}
 	}
 }
