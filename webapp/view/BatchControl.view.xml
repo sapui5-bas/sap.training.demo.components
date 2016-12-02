@@ -51,10 +51,10 @@
 						<f:toolbar>
 							<Toolbar design="Solid" ariaLabelledBy="idTitle">
 								<content>
-									<Text id="idTitle" text="Update Airplane Name"/>
+									<Text id="idTitle" text="Update Airline Name"/>
 									<ToolbarSpacer/>
-									<Button icon="sap-icon://save" press="onSaveAirplaneName"/>
-									<Button icon="sap-icon://sys-cancel-2" press="onCancelAirplaneName"/>
+									<Button icon="sap-icon://save" press="onSaveAirlineName"/>
+									<Button icon="sap-icon://sys-cancel-2" press="onCancelAirlineName"/>
 								</content>
 							</Toolbar>
 						</f:toolbar>

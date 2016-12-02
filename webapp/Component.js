@@ -2,8 +2,9 @@ sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
 	"sap/training/model/models",
-	"sap/ui/model/odata/v4/ODataModel"
-], function(UIComponent, Device, models, ODataModel) {
+	"sap/ui/model/odata/v4/ODataModel",
+	"sap/training/controller/NewAirlineDialog"
+], function(UIComponent, Device, models, ODataModel, NewAirlineDialog) {
 	"use strict";
 
 	return UIComponent.extend("sap.training.Component", {
@@ -27,8 +28,11 @@ sap.ui.define([
 			// });
 			// oModel.setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
 			// this.setModel(oModel);
-			
+
 			// this.getModel().setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
+
+			//set fragment controller
+			this.newAirlineDialog = new NewAirlineDialog();
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");

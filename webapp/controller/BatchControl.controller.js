@@ -25,11 +25,11 @@ sap.ui.define([
 			});
 		},
 
-		onCancelAirplaneName: function(oEvent) {
+		onCancelAirlineName: function(oEvent) {
 			this.getView().getModel().resetChanges("AirlineNameUpdateGroup");
 		},
 
-		onSaveAirplaneName: function(oEvent) {
+		onSaveAirlineName: function(oEvent) {
 			var oModel = this.getView().getModel();
 			var promise = this.getView().getModel().submitBatch("AirlineNameUpdateGroup");
 			promise.then(function(result) {

@@ -20,8 +20,13 @@
 				"type": "OData",
 				"settings": {
 					"odataVersion": "4.0",
-					"localUri": "localService/metadata.xml"
+					"localUri": "localService/metadata.xml",
+					"annotations": ["localAnnotations"]
 				}
+			},
+			"localAnnotations": {
+				"uri": "model/annotations.xml",
+				"type": "ODataAnnotation"
 			}
 		}
 	},
@@ -41,15 +46,12 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_belize"
-		]
+		"supportedThemes": ["sap_hcb", "sap_belize"]
 	},
 	"sap.ui5": {
 		"_version": "1.1.0",
 		"rootView": {
-			"viewName": "sap.training.view.BatchControl",
+			"viewName": "sap.training.view.CreateAndDelete",
 			"type": "XML"
 		},
 		"dependencies": {

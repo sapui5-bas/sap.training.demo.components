@@ -1,0 +1,16 @@
+<Annotations Target="/Microsoft.OData.Service.Sample.TrippinInMemory.Models.Container/People">
+    <Annotation Term="Org.OData.Capabilities.V1.SortRestrictions">
+        <Record>
+            <PropertyValue Property="AscendingOnlyProperties">
+                <Collection>
+                    <PropertyPath>LastName</PropertyPath>
+                </Collection>
+            </PropertyValue>
+            <PropertyValue Property="NonSortableProperties">
+                <Collection>
+                    <PropertyPath>UserName</PropertyPath>
+                </Collection>
+            </PropertyValue>
+        </Record>
+    </Annotation>
+</Annotations>
