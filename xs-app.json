@@ -1,0 +1,17 @@
+{
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "authenticationType": "none",
+      "csrfProtection": false,
+      "source": "^/ODATA_ORG/(.*)$",
+      "destination": "ODATA_ORG",
+      "target": "$1"
+    },
+    {
+      "source": "^(.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt"
+    }
+  ]
+}

@@ -1,89 +1,95 @@
 {
-	"_version": "1.1.0",
-	"sap.app": {
-		"_version": "1.1.0",
-		"id": "sap.training",
-		"type": "application",
-		"i18n": "i18n/i18n.properties",
-		"applicationVersion": {
-			"version": "1.0.0"
-		},
-		"title": "{{appTitle}}",
-		"description": "{{appDescription}}",
-		"sourceTemplate": {
-			"id": "servicecatalog.connectivityComponent",
-			"version": "0.0.0"
-		},
-		"dataSources": {
-			"TripPin": {
-				"uri": "/ODATA_ORG/TripPinRESTierService/(S(44nbzk0kapmsdmankuj0auq0))/",
-				"type": "OData",
-				"settings": {
-					"odataVersion": "4.0",
-					"localUri": "localService/metadata.xml",
-					"annotations": ["localAnnotations"]
-				}
-			},
-			"localAnnotations": {
-				"uri": "model/annotations.xml",
-				"type": "ODataAnnotation"
-			}
-		}
-	},
-	"sap.ui": {
-		"_version": "1.1.0",
-		"technology": "UI5",
-		"icons": {
-			"icon": "",
-			"favIcon": "",
-			"phone": "",
-			"phone@2": "",
-			"tablet": "",
-			"tablet@2": ""
-		},
-		"deviceTypes": {
-			"desktop": true,
-			"tablet": true,
-			"phone": true
-		},
-		"supportedThemes": ["sap_hcb", "sap_belize"]
-	},
-	"sap.ui5": {
-		"_version": "1.1.0",
-		"rootView": {
-			"viewName": "sap.training.view.CreateAndDelete",
-			"type": "XML"
-		},
-		"dependencies": {
-			"minUI5Version": "1.30.0",
-			"libs": {
-				"sap.ui.core": {},
-				"sap.m": {},
-				"sap.ui.layout": {}
-			}
-		},
-		"contentDensities": {
-			"compact": true,
-			"cozy": true
-		},
-		"models": {
-			"i18n": {
-				"type": "sap.ui.model.resource.ResourceModel",
-				"settings": {
-					"bundleName": "sap.training.i18n.i18n"
-				}
-			},
-			"": {
-				"dataSource": "TripPin",
-				"settings": {
-					"synchronizationMode": "None"
-				}
-			}
-		},
-		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
-		}
-	}
+    "_version": "1.1.0",
+    "sap.app": {
+        "_version": "1.1.0",
+        "id": "sap.training.products",
+        "type": "component",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{compTitle}}",
+        "description": "{{compDescription}}",
+        "sourceTemplate": {
+            "id": "servicecatalog.connectivityComponent",
+            "version": "0.0.0"
+        },
+        "dataSources": {
+            "DemoService": {
+                "uri": "ODATA_ORG/V2/(S(q13vovs2xgnwub254hxyug3l))/OData/OData.svc/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata.xml"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "_version": "1.1.0",
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_belize"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.1.0",
+        "rootView": {
+            "viewName": "sap.training.products.view.Products",
+            "type": "XML"
+        },
+        "dependencies": {
+            "minUI5Version": "1.30.0",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.layout": {}
+            }
+        },
+        "config": {
+            "displayDialog": true
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "sap.training.products.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "DemoService",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        }
+    }
 }

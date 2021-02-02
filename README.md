@@ -1,1 +1,1 @@
-# sap.training.demo.odata.v4
+# sap.training.demo.components
